@@ -43,7 +43,7 @@ export default function AnalyzePage() {
   if (result) return <ResultView result={result} onNew={() => { setResult(null); setFile(null); setJobDesc('') }} navigate={navigate} />
 
   return (
-    <div className="max-w-2xl mx-auto animate-fade-in">
+    <div className="max-w-2xl mx-auto">
       <div className="mb-6">
         <h2 className="text-xl font-bold text-slate-900 dark:text-white">Analyze Your Resume</h2>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
@@ -68,7 +68,7 @@ export default function AnalyzePage() {
             <span className="text-slate-400 dark:text-slate-500 font-normal ml-1">(min 50 chars)</span>
           </label>
           <textarea
-            className="input min-h-[200px] resize-y font-mono text-xs leading-relaxed"
+            className="input min-h-[200px] resize-y font-sans text-sm leading-relaxed"
             placeholder="Paste the full job description here — include required skills, responsibilities, and qualifications…"
             maxLength={20000}
             value={jobDesc}
@@ -121,7 +121,7 @@ function Section({ icon: Icon, title, color, children }) {
 
 function ResultView({ result, onNew, navigate }) {
   return (
-    <div className="space-y-6 animate-slide-up">
+    <div className="space-y-6">
       {/* Score header */}
       <div className="card p-6 flex flex-col sm:flex-row items-center gap-6">
         <ScoreCircle score={result.match_score} size={140} />

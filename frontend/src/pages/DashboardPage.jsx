@@ -38,11 +38,11 @@ export default function DashboardPage() {
   const stats = profile?.stats || {}
 
   return (
-    <div className="space-y-8 animate-fade-in">
+    <div className="space-y-8">
       {/* Greeting */}
       <div>
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-          Good {getGreeting()}, {firstName} 👋
+          Good {getGreeting()}, {firstName}
         </h2>
         <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
           Here's a summary of your resume analysis activity.
@@ -68,7 +68,7 @@ export default function DashboardPage() {
           label="Skills Identified"
           value={recent.reduce((s, a) => s + (a.candidate_skills?.length ?? 0), 0)}
           sub="Across recent analyses"
-          color="blue"
+          color="brand"
         />
         <StatCard
           icon={Zap}
@@ -82,7 +82,7 @@ export default function DashboardPage() {
       {/* Quick action */}
       {stats.total_analyses === 0 && (
         <div className="card p-8 border-dashed text-center">
-          <div className="w-14 h-14 rounded-2xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mx-auto mb-4">
+          <div className="w-14 h-14 rounded-xl bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center mx-auto mb-4">
             <Zap className="w-7 h-7 text-brand-600 dark:text-brand-400" />
           </div>
           <h3 className="text-base font-semibold text-slate-900 dark:text-white mb-1">Analyze your first resume</h3>

@@ -43,32 +43,20 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex">
-      {/* Left panel — branding */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-brand-600 to-brand-800 flex-col items-center justify-center p-12 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="absolute rounded-full border border-white"
-              style={{
-                width: `${(i + 1) * 120}px`, height: `${(i + 1) * 120}px`,
-                top: '50%', left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-            />
-          ))}
-        </div>
-        <div className="relative text-center text-white">
-          <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
-            <Zap className="w-8 h-8 text-white" />
+      {/* Quiet, light branding panel */}
+      <div className="hidden lg:flex lg:w-1/2 bg-brand-50 dark:bg-slate-900 border-r border-brand-100 dark:border-slate-800 flex-col items-center justify-center p-12">
+        <div className="max-w-md w-full">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-10 h-10 rounded-lg bg-brand-600 flex items-center justify-center"><Zap className="w-5 h-5 text-white" /></div>
+            <span className="text-xl font-semibold text-slate-900 dark:text-white">SkillBridge</span>
           </div>
-          <h2 className="text-3xl font-bold mb-3">SkillBridge</h2>
-          <p className="text-brand-200 text-lg max-w-sm leading-relaxed">
-            AI-powered resume analysis. Know your match score. Bridge your skill gaps.
-          </p>
-          <div className="mt-10 grid grid-cols-3 gap-4 text-center">
-            {[['98%', 'Accuracy'], ['2s', 'Analysis'], ['10K+', 'Resumes']].map(([v, l]) => (
-              <div key={l} className="bg-white/10 rounded-xl p-4">
-                <p className="text-2xl font-bold">{v}</p>
-                <p className="text-brand-200 text-xs mt-1">{l}</p>
+          <p className="text-sm font-medium text-brand-700 dark:text-brand-300 mb-4">YOUR CAREER, YOUR NEXT STEP</p>
+          <h2 className="text-4xl font-semibold tracking-tight text-slate-900 dark:text-white leading-tight">Know your skills.<br />Build your future.</h2>
+          <p className="text-slate-600 dark:text-slate-300 mt-5 leading-relaxed">Compare your resume with a job description and discover what to learn next.</p>
+          <div className="mt-10 space-y-3">
+            {['Understand your match score', 'Identify missing skills', 'Get learning suggestions'].map((label, i) => (
+              <div key={label} className="flex items-center gap-3 bg-white dark:bg-slate-800 border border-brand-100 dark:border-slate-700 rounded-lg p-4 text-sm text-slate-700 dark:text-slate-200">
+                <span className="text-brand-600 dark:text-brand-300 font-semibold">0{i + 1}</span>{label}
               </div>
             ))}
           </div>
@@ -77,7 +65,7 @@ export default function LoginPage() {
 
       {/* Right panel — form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-6 bg-white dark:bg-[#0f1117]">
-        <div className="w-full max-w-md animate-fade-in">
+        <div className="w-full max-w-md">
           {/* Mobile logo */}
           <div className="flex items-center gap-2 mb-8 lg:hidden">
             <div className="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center">

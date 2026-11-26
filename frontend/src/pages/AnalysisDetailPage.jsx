@@ -37,7 +37,7 @@ export default function AnalysisDetailPage() {
   })
 
   return (
-    <div className="space-y-6 animate-slide-up">
+    <div className="space-y-6">
       {/* Back + actions */}
       <div className="flex items-center justify-between">
         <button onClick={() => navigate('/history')} className="btn-secondary">

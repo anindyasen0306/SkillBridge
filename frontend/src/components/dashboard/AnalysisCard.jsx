@@ -40,8 +40,8 @@ export default function AnalysisCard({ analysis, onDeleted }) {
   return (
     <div
       onClick={() => navigate(`/history/${analysis.id}`)}
-      className="card p-5 cursor-pointer hover:shadow-md hover:border-slate-300 dark:hover:border-slate-600
-                 transition-all duration-200 group animate-fade-in"
+      className="card p-5 cursor-pointer hover:border-slate-300 dark:hover:border-slate-600
+                 transition-all duration-200 group"
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-start gap-3 min-w-0 flex-1">

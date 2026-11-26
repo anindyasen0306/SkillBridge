@@ -42,12 +42,12 @@ export default function ProfilePage() {
   const joinDate = new Date(profile?.created_at).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })
 
   return (
-    <div className="max-w-2xl mx-auto space-y-6 animate-fade-in">
+    <div className="max-w-2xl mx-auto space-y-6">
       {/* Profile card */}
       <div className="card p-6">
         <div className="flex items-start gap-5">
           {/* Avatar */}
-          <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center flex-shrink-0">
+          <div className="w-20 h-20 rounded-xl bg-brand-600 flex items-center justify-center flex-shrink-0">
             <span className="text-2xl font-bold text-white">{initials}</span>
           </div>
 

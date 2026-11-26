@@ -46,7 +46,7 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-slate-50 dark:bg-[#0f1117]">
-      <div className="w-full max-w-md animate-fade-in">
+      <div className="w-full max-w-md">
         {/* Logo */}
         <div className="flex items-center gap-2 mb-8">
           <div className="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center">
@@ -57,7 +57,7 @@ export default function RegisterPage() {
 
         <div className="card p-8">
           <h1 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Create your account</h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Free forever. No credit card required.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Start building your career with SkillBridge.</p>
 
           <form onSubmit={handleSubmit} className="space-y-4" noValidate>
             <div>

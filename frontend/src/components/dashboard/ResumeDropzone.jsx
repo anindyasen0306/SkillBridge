@@ -40,7 +40,7 @@ export default function ResumeDropzone({ onFileSelect, file, onClear }) {
     <div
       {...getRootProps()}
       className={clsx(
-        'relative flex flex-col items-center justify-center gap-3 p-10 rounded-2xl border-2 border-dashed cursor-pointer',
+        'relative flex flex-col items-center justify-center gap-3 p-6 sm:p-10 rounded-xl border-2 border-dashed cursor-pointer',
         'transition-all duration-200',
         isDragActive && !isDragReject
           ? 'border-brand-500 bg-brand-50 dark:bg-brand-900/20'
@@ -52,12 +52,12 @@ export default function ResumeDropzone({ onFileSelect, file, onClear }) {
       <input {...getInputProps()} />
 
       <div className={clsx(
-        'w-14 h-14 rounded-2xl flex items-center justify-center transition-colors',
-        isDragActive ? 'bg-brand-100 dark:bg-brand-900/40' : 'bg-slate-100 dark:bg-slate-800'
+        'w-14 h-14 rounded-xl flex items-center justify-center transition-colors',
+        isDragActive ? 'bg-brand-100 dark:bg-brand-900/40' : 'bg-brand-50 dark:bg-slate-800'
       )}>
         {isDragActive
           ? <FileText className="w-7 h-7 text-brand-600 dark:text-brand-400" />
-          : <Upload    className="w-7 h-7 text-slate-400 dark:text-slate-500" />
+          : <Upload    className="w-7 h-7 text-brand-600 dark:text-brand-400" />
         }
       </div>
 
